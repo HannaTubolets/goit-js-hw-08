@@ -1,14 +1,13 @@
 import { galleryItems } from './gallery-items';
 console.log(galleryItems);
 
-import SimpleLightbox from "simplelightbox";
-import "simplelightbox/dist/simple-lightbox.min.css";
+import SimpleLightbox from 'simplelightbox';
+import 'simplelightbox/dist/simple-lightbox.min.css';
 
 const galleryListEl = document.querySelector('.gallery');
 const galleryItemsEl = [];
 
 galleryItems.forEach(element => {
-
   const galleryLink = document.createElement('a');
   galleryLink.className = 'gallery__link';
   galleryLink.href = element.original;
@@ -26,5 +25,5 @@ galleryItems.forEach(element => {
 galleryListEl.append(...galleryItemsEl);
 
 new SimpleLightbox('.gallery a', {
-    captionDelay: 250
+  captionDelay: 250,
 });
